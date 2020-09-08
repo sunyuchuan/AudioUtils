@@ -1,0 +1,19 @@
+{
+    "track0": [
+        { "file_path":"../data/side_chain_test.wav","volume":80,"cropStartTimeMs":118000,"cropEndTimeMs":150000,"startTimeMs":140000,"endTimeMs":200000,
+            "effects": [
+                { "name":"NoiseSuppression","info":"On"},
+                { "name":"Beautify","info":"CleanVoice"}
+            ]
+        },
+        { "file_path":"../data/side_chain_test.wav","volume":80,"cropStartTimeMs":10000,"cropEndTimeMs":118000,"startTimeMs":10000,"endTimeMs":120000,
+            "effects": [
+                { "name":"NoiseSuppression","info":"On"},
+                { "name":"Beautify","info":"CleanVoice"}
+            ]
+        }
+    ],
+    "track1": [{ "file_path":"../data/side_chain_music_test.wav","volume":80,"cropStartTimeMs":35000,"cropEndTimeMs":650000,"startTimeMs":5000,"endTimeMs":75000,"fadeInTimeMs":3000,"fadeOutTimeMs":3000}],
+    "track2": [{ "file_path":"../data/bgm1.mp3","volume":80,"cropStartTimeMs":0,"cropEndTimeMs":350000,"startTimeMs":80000,"endTimeMs":120000,"fadeInTimeMs":3000,"fadeOutTimeMs":3000}],
+    "track3": [{ "file_path":"../data/audio_effects_2.wav","volume":80,"cropStartTimeMs":0,"cropEndTimeMs":6000,"startTimeMs":190000,"endTimeMs":200000,"fadeInTimeMs":0,"fadeOutTimeMs":0}]
+}

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="visible"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_reverb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="混响特效"
+        android:textSize="18sp" />
+
+    <RadioGroup
+        android:id="@+id/reverb_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_voice_original"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="原声" />
+
+        <RadioButton
+            android:id="@+id/rb_echo_church"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="礼堂" />
+
+        <RadioButton
+            android:id="@+id/rb_echo_live"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="现场演唱" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_equalizer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="声音美化"
+        android:textSize="18sp" />
+
+    <RadioGroup
+        android:id="@+id/eq_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/eq_none"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="原声" />
+
+        <RadioButton
+            android:id="@+id/eq_clean_voice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="清晰" />
+
+        <RadioButton
+            android:id="@+id/eq_bass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="沉稳" />
+
+        <RadioButton
+            android:id="@+id/eq_low_voice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="低音" />
+
+        <RadioButton
+            android:id="@+id/eq_penetrating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="明亮" />
+
+        <RadioButton
+            android:id="@+id/eq_magnetic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="磁性" />
+
+        <RadioButton
+            android:id="@+id/eq_soft_pitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="柔和" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_morph"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="变声"
+        android:textSize="18sp" />
+
+    <RadioGroup
+        android:id="@+id/morph_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/morph_none"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="原声" />
+
+        <RadioButton
+            android:id="@+id/morph_man"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="男声" />
+
+        <RadioButton
+            android:id="@+id/morph_women"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="女声" />
+
+        <RadioButton
+            android:id="@+id/morph_robot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="机器人" />
+
+        <RadioButton
+            android:id="@+id/morph_minions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="小黄人" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/btn_ns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="打开降噪" />
+
+        <Button
+            android:id="@+id/btn_limiter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="打开限幅" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_audition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="实时处理"
+        android:textSize="18sp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+        <Button
+            android:id="@+id/btn_audition"
+            android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"
+            android:text="试听" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="录音"
+        android:textSize="18sp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+        <Button
+            android:id="@+id/btn_record"
+            android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"
+            android:text="开始录音" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_pcmtowav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="pcmTowav"
+        android:textSize="18sp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+        <Button
+            android:id="@+id/btn_pcmtowav"
+            android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"
+            android:text="开始" />
+    </LinearLayout>
+
+</LinearLayout>

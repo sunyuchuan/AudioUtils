@@ -1,0 +1,7 @@
+include ':audio_utils-java'
+include ':audio_utils-armv7a'
+include ':audio_utils-armv5'
+include ':audio_utils-arm64'
+include ':audio_utils-x86'
+include ':audio_utils-x86_64'
+include ':app'

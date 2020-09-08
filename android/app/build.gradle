@@ -1,0 +1,58 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "23.0.0"
+    defaultConfig {
+        applicationId "com.xmly.audio.effect"
+        minSdkVersion 9
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    productFlavors {
+        all32 { minSdkVersion 15 }
+        all64 { minSdkVersion 21 }
+        // armv5 {}
+        // armv7a {}
+        // arm64 { minSdkVersion 21 }
+        // x86 {}
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:23.0.1'
+    compile 'com.android.support:preference-v7:23.0.1'
+    compile 'com.android.support:support-annotations:23.0.1'
+    compile 'com.github.iknow4:android-utils-sdk:1.1.2'
+
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    testCompile 'junit:junit:4.12'
+
+    compile project(':audio_utils-java')
+
+    all32Compile project(':audio_utils-armv5')
+    all32Compile project(':audio_utils-armv7a')
+    all32Compile project(':audio_utils-x86')
+
+    all64Compile project(':audio_utils-armv5')
+    all64Compile project(':audio_utils-armv7a')
+    all64Compile project(':audio_utils-arm64')
+    all64Compile project(':audio_utils-x86')
+    all64Compile project(':audio_utils-x86_64')
+}
