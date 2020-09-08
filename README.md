@@ -5,11 +5,15 @@
 
 
 Linux  :
+
     cd lib-audio-utils
+    
     ./run_test.sh
 
 Android:
+
     Android Need [NDK r14b](https://dl.google.com/android/repository/android-ndk-r14b-linux-x86_64.zip)
+    
     ./cross_build.sh
     ./package.sh
     cd android/audio_utils-armv7a/src/main/jni/
